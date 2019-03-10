@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         Date base = new Date();
         HashMap<Integer, File> fileMap = new HashMap();
         ArrayList nums = new ArrayList();
@@ -21,10 +21,8 @@ public class Main {
         String outputPath = "";
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Path Here(It should be like \"C:\\Windows\\System32\":");
-        System.out.println();
         path = scanner.nextLine();
         System.out.print("Enter Output txt Here(It should be like \"C:/output.txt\"):");
-        System.out.println();
         outputPath = scanner.nextLine();
         File[] list = new File(path).listFiles(new myFileFilter());
         int i = 0;
